@@ -1,1 +1,1 @@
-(animation)[https://michalsnik.github.io/aos/]
+(animation).[https://michalsnik.github.io/aos/]
