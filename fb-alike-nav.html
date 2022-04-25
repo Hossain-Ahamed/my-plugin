@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px 0px 20px;
+            /* was padding: 15px 20px */
+            position: sticky;
+            background-color: white;
+            z-index: 100;
+            top: 0;
+            box-shadow: 0px 5px 8px -9px rgba(0, 0, 0, 75);
+        }
+
+        /* added below four lines for image centering */
+        .header__left {
+            display: flex;
+            align-items: center;
+        }
+
+        .header__left>img {
+            height: 40px;
+        }
+
+        .header__center {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+
+        .header__option {
+            display: flex;
+            align-items: center;
+            padding: 0 2vw;
+            cursor: pointer;
+            height: 52px;
+        }
+
+        .header__right {
+            display: flex;
+        }
+
+        .header__info {
+            display: flex;
+            align-items: center;
+            padding-right: 12px;
+        }
+
+        .header__info>span {
+            margin-left: 10px;
+        }
+
+        /* added below four lines for bottom border on active link */
+        .header__option.active {
+            border-bottom: 1px solid red;
+            border-bottom-width: 3px;
+        }
+
+        .header__option.active>i {
+            color: #1877f2;
+            /* removed border-bottom, border-bottom-width and bottom rules */
+        }
+
+        .header__option:hover {
+            background-color: #f0f2f5;
+            border-top-left-radius: 1px;
+            border-top-right-radius: 1px;
+            border-bottom-right-radius: 1px;
+            border-bottom-left-radius: 1px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+        integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+        crossorigin="anonymous" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="header__left">
+            <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Free_logo.svg/600px-Free_logo.svg.png" />
+
+        </div>
+        <div class="header__center d-none d-xl-flex d-md-flex">
+            <div  class="header__option active">
+                <i class="fas fa-home"></i>
+            </div>
+            <div  class="header__option">
+                <i class="fas fa-users"></i>
+            </div>
+            <div  class="header__option">
+                <i class="fas fa-video"></i>
+            </div>
+        </div>
+        <div class="header__right">
+            <div class="header__info d-none d-xl-flex">
+                <i class="fas fa-user-circle fa-lg"></i>
+                <span class="header__info__name">Aakash</span>
+            </div>
+        </div>
+    </div>
+    <script>
+        var header = document.getElementsByClassName('header__center')[0];
+        var buttons = document.getElementsByClassName('header__option');
+        for(var i =0; i<buttons.length;i++){
+            buttons[i].addEventListener('click',function(){
+                var current = document.getElementsByClassName('active');
+                current[0].className = current[0].className.replace('active',"");
+                this.className+=' active ';
+            });
+        }
+
+    </script>
+</body>
+
+</html>
