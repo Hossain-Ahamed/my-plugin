@@ -5,4 +5,5 @@
 5. Fb alike navbar → Github - plugin - fb alike nav
 6. Random OTP with text ⇒  github plugin
 7. Animation --> animation.md github plugin
+8. web dev fb all data and info - color - qr- network -vibration -location-text blend - bluetooth --> [https://drive.google.com/file/d/1axEKNpNxtcbLDRu-aTendjeL3Ua7I353/view?usp=share_link]
 
