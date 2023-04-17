@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="ab"></p>
+    <input type="text" id="j">
+    <button onclick="handle()">click me</button>
+
+    <script>
+      
+      
+        const handle = () => {
+            let a = generateUniqueString(document.getElementById('j').value);
+            document.getElementById('j').value = a;
+
+        }
+        
+        
+        function generateUniqueString(current) {
+            let alphabet = 'abcdefghijklmnopqrstuvwxyz';
+
+            let currentLen = current.length;
+
+            let result = current;
+            let index = currentLen - 1;
+            while (index >= 0) {
+                let nextIndex = alphabet.indexOf(result[index]) + 1;
+                if (nextIndex < alphabet.length) {
+
+                    result = result.slice(0, index) + alphabet[nextIndex] + result.slice(index + 1);
+                    break;
+                } else {
+                    result = result.slice(0, index) + 'a' + result.slice(index + 1);
+                    index--;
+                }
+            }
+            if (index < 0) {
+
+                result = '';
+                for (let i = 0; i <= current.length; i++) {
+                    result += 'a';
+                }                       
+            }
+            return result;
+        }
+    </script>
+</body>
+
+</html>
