@@ -8,3 +8,4 @@
 >8. ***web dev fb all data and info - color - qr- network -vibration -location-text blend - bluetooth*** --> [https://drive.google.com/drive/folders/1avLx2oge9x-Ajf6FeR8XDOETwx_exHVo]<br>
 >9. ***Image card*** --> github repo - ultra active club<br>
 >10. ***incremented character*** aa,ab,ac,ad --> github plugin [incrementd character]
+>11. ***Daisy UI***, ***Icon:*** React Icons, hero icons, ***Chart:*** charts.js, Rechart, ***Toast:*** React Hot Toast
