@@ -11,10 +11,10 @@
 >11. ***Daisy UI***, ***Icon:*** React Icons, hero icons, ***Chart:*** charts.js, Rechart, ***Toast:*** React Hot Toast, ***seo:*** react-helmet-async, ***carousel*** : swiper js 
 >12. ***load group by group image card*** --> https://codepen.io/jkantner/pen/rNVKObZ
 >13. ***screen size observation*** -->milestone 10 project 
-
->14. Date : Aug 14, 2023
-      ```const today = new Date();
+>14. ***Date : Aug 14, 2023***
+```const today = new Date();
 const options = { year: 'numeric', month: 'short', day: 'numeric' };
 const formattedDate = today.toLocaleDateString('en-US', options);
 console.log(formattedDate); // Output: "Aug 29, 2023"
 ```
+>15. ***Convert Image to Webp***  [https://codepen.io/nosilleg/pen/XMdvoM]
