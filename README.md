@@ -17,4 +17,8 @@ const options = { year: 'numeric', month: 'short', day: 'numeric' };
 const formattedDate = today.toLocaleDateString('en-US', options);
 console.log(formattedDate); // Output: "Aug 29, 2023"
 ```
->15. ***Convert Image to Webp***  [https://codepen.io/nosilleg/pen/XMdvoM]
+>15. ***'hossain ahamed' to 'Hossain Ahamed' string beutify***
+```
+'hossain ahamed'.toLowerCase().replace(/(?:^|\s)\w/g, match => match.toUpperCase()); // 'Hossain Ahamed'
+```
+>16. ***Convert Image to Webp***  [https://codepen.io/nosilleg/pen/XMdvoM]
