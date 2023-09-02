@@ -22,3 +22,4 @@ console.log(formattedDate); // Output: "Aug 29, 2023"
 'hossain ahamed'.toLowerCase().replace(/(?:^|\s)\w/g, match => match.toUpperCase()); // 'Hossain Ahamed'
 ```
 >16. ***Convert Image to Webp***  [https://codepen.io/nosilleg/pen/XMdvoM]
+>16. ***Get Geo Location***  [get location.jsx]
