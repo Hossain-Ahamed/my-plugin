@@ -22,4 +22,9 @@ console.log(formattedDate); // Output: "Aug 29, 2023"
 'hossain ahamed'.toLowerCase().replace(/(?:^|\s)\w/g, match => match.toUpperCase()); // 'Hossain Ahamed'
 ```
 >16. ***Convert Image to Webp***  [https://codepen.io/nosilleg/pen/XMdvoM]
->16. ***Get Geo Location***  [Geo location.jsx](https://github.com/Hossain-Ahamed/my-plugin/blob/main/get%20location.jsx)
+>17. ***Get Geo Location***  [Geo location.jsx](https://github.com/Hossain-Ahamed/my-plugin/blob/main/get%20location.jsx)
+>18. ***Disable up and down button in inputfield : number***
+```
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none;  margin: 0;}
+input[type=number] { appearance : textfield;-moz-appearance: textfield;}
+```
