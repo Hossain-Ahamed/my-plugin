@@ -16,6 +16,9 @@
 const options = { year: 'numeric', month: 'short', day: 'numeric' };
 const formattedDate = today.toLocaleDateString('en-US', options);
 console.log(formattedDate); // Output: "Aug 29, 2023"
+
+{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric' }).format(new Date(order?.createdAt))}
+{new Date(order?.createdAt).toLocaleTimeString('en-US')}
 ```
 >15. ***'hossain ahamed' to 'Hossain Ahamed' string beutify***
 ```
