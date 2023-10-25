@@ -1,0 +1,68 @@
+
+1. with projection only in local data
+const pipeline = [
+            {
+                $match: { stdEmail: studentEmail }
+            },
+            {
+                $project: {
+                    class_ID: { $toObjectId: "$class_ID" } ,// Convert class_ID to ObjectId
+                    stdEmail : 1,
+                    std_ID : 1,
+                    Joindate :1
+                }
+            },
+            {
+                $lookup: {
+                    from: 'class-data',
+                    localField: "class_ID",
+                    foreignField: "_id",
+                    as: "classData"
+                },
+                
+            },
+            {
+                $sort: { _id: -1 }
+            }
+        ];
+
+
+2. with projection both inside the local data & foreign data
+
+        const pipeline = [
+            {
+                $match: { stdEmail: studentEmail }
+            },
+            {
+                $project: {
+                    class_ID: { $toObjectId: "$class_ID" }, // Convert class_ID to ObjectId
+                    stdEmail: 1,
+                    std_ID: 1,
+                    Joindate: 1
+                }
+            },
+            {
+                $lookup: {
+                    from: 'class-data',
+                    let: { classId: "$class_ID" }, // Create a variable for the class_ID
+                    pipeline: [
+                        {
+                            $match: {
+                                $expr: {
+                                    $eq: ["$_id", "$$classId"]
+                                }
+                            }
+                        },
+                        {
+                            $project: {
+                                className: 1 // Include only className from the foreign collection
+                            }
+                        }
+                    ],
+                    as: "classData"
+                }
+            },
+            {
+                $sort: { _id: -1 }
+            }
+        ];
