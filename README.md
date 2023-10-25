@@ -31,3 +31,6 @@ console.log(formattedDate); // Output: "Aug 29, 2023"
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button { -webkit-appearance: none;  margin: 0;}
 input[type=number] { appearance : textfield;-moz-appearance: textfield;}
 ```
+
+>19. ***Mongo Pipeline when the _id is not in objectID*** [mongoPipeline.txt](https://github.com/Hossain-Ahamed/my-plugin/blob/144d05e766c4ea1ff58a8e59a8968cf4953c84e7/mongoPipeline.txt)
+
