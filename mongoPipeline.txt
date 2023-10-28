@@ -177,3 +177,56 @@ const getAllMyPurchasesClasses_For_Student = async (req, res) => {
 }
 
 code data in H:\0.01 REACT\Milestone 12\Cinematic Arts Oasis\cinematic-arts-oasis-server\controller\ClassController.js
+
+
+
+3. get with both projeciton and then return only in array
+
+// get all the followers of instructor 
+const getFollowerOFInstructor = async (insIDToMatch) => {
+    // Assuming userData?._id contains the specific insID you want to match
+
+    console.log(insIDToMatch, '---------------------------------------------------------------------------------')
+
+    const followPipeline = [
+        {
+            $match: { insID: insIDToMatch }
+        },
+        {
+            $project: {
+                stdID: { $toObjectId: "$stdID" }, // Convert stdID to ObjectId
+                insID: { $toObjectId: "$insID" }, // Convert insID to ObjectId
+                _id: 1
+            }
+        },
+        {
+            $lookup: {
+                from: "all-user-data",
+                localField: "stdID",
+                foreignField: "_id",
+                as: "followData"
+            }
+        },
+        {
+            $unwind: "$followData" //unwind the follow data array
+        },
+        {
+            $project: {
+                _id: "$followData._id",
+                name: "$followData.name",
+                phone: "$followData.phone",
+                email: "$followData.email",
+                firebase_UID: "$followData.firebase_UID",
+
+            }
+        },
+
+    ];
+
+    const followers = await followCollection.aggregate(followPipeline).toArray();
+
+    return followers;
+
+}
+
+
