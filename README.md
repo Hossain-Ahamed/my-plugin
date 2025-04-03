@@ -38,3 +38,4 @@ input[type=number] { appearance : textfield;-moz-appearance: textfield;}
 >21. ```
 >         onFocus={(e) => e.target.addEventListener("wheel", function (e) { e.preventDefault() }, { passive: false })}
 >22. ```
+>23. ***Pre flight slove in Tailwind*** [custom_CSS_taiwind.html]([https://github.com/Hossain-Ahamed/my-plugin/blob/144d05e766c4ea1ff58a8e59a8968cf4953c84e7/mongoPipeline.txt](https://github.com/Hossain-Ahamed/my-plugin/blob/main/custom_CSS_tailwind.html))
