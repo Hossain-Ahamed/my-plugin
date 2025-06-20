@@ -35,7 +35,8 @@ input[type=number] { appearance : textfield;-moz-appearance: textfield;}
 >19. ***Mongo Pipeline when the _id is not in objectID*** [mongoPipeline.txt](https://github.com/Hossain-Ahamed/my-plugin/blob/144d05e766c4ea1ff58a8e59a8968cf4953c84e7/mongoPipeline.txt)
 
 >20. ***scroll stop number increase****
->21. ```
->         onFocus={(e) => e.target.addEventListener("wheel", function (e) { e.preventDefault() }, { passive: false })}
->22. ```
->23. ***Pre flight slove in Tailwind*** [custom_CSS_taiwind.html]([https://github.com/Hossain-Ahamed/my-plugin/blob/144d05e766c4ea1ff58a8e59a8968cf4953c84e7/mongoPipeline.txt](https://github.com/Hossain-Ahamed/my-plugin/blob/main/custom_CSS_tailwind.html))
+ ```
+        onFocus={(e) => e.target.addEventListener("wheel", function (e) { e.preventDefault() }, { passive: false })}
+ ```
+>21. ***Pre flight slove in Tailwind*** [custom_CSS_taiwind.html]([https://github.com/Hossain-Ahamed/my-plugin/blob/144d05e766c4ea1ff58a8e59a8968cf4953c84e7/mongoPipeline.txt](https://github.com/Hossain-Ahamed/my-plugin/blob/main/custom_CSS_tailwind.html))
+>22. ***http status ts template + list*** ⇒  [httpstatus.ts](https://github.com/Hossain-Ahamed/my-plugin/blob/main/httpStatus.ts) <br>
